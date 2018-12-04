@@ -51,7 +51,7 @@ public class TicTacToe {
 			int rChoice = (choice - cChoice) / 3;
 			while (choice < 0 || choice > 8 || board[rChoice][cChoice] != 0) {
 				System.out.println("Invalid num, choose another one");
-				choice = in.nextInt();
+				choice = in.nextInt() - 1;
 				cChoice = choice % 3;
 				rChoice = (choice - cChoice) / 3;
 			}
@@ -117,7 +117,7 @@ public class TicTacToe {
 					// If empty cell
 					if (grid[r][c] == 0) {
 						grid[r][c] = -1;
-						min = Math.min(min, minMax(grid, depth + 1, false, new Move(r, c)));
+						min = Math.min(min, minMax(grid, depth + 1, true, new Move(r, c)));
 						// Undo try
 						grid[r][c] = 0;
 					}
@@ -206,6 +206,7 @@ public class TicTacToe {
 				System.out.println("-----");
 			}
 		}
+		System.out.println();
 	}
 
 	static class Move {
