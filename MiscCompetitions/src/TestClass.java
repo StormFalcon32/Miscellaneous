@@ -1,16 +1,28 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class TestClass {
 	
+	static int[] dp;
+	
 	public static void main(String args[]) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer ln = new StringTokenizer(in.readLine());
-		int n = Integer.parseInt(ln.nextToken());
-		for (int i = 0; i < n; i++) {
-			
-		}
+		int t = Integer.parseInt(in.readLine());
+        int[] inputs = new int[t];
+        int max = 0;
+        for (int i = 0; i < t; i++) {
+           inputs[i] = Integer.parseInt(in.readLine());   
+           max = Math.max(max, inputs[i]);
+        }
+        dp = new int[max + 1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i <= max; i++) {
+            dp[i] = (dp[i - 1] * i) % (1000000000 + 7);
+        }
+        for (int i = 0; i < t; i++) {
+           System.out.println(dp[inputs[i]] % (1000000000 + 7));
+        }
 	}
 }
