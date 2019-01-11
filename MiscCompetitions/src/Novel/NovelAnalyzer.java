@@ -1,27 +1,39 @@
 package Novel;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
+import javax.swing.JFrame;
+
 public class NovelAnalyzer {
 	static String[] toRemove = { ".", ",", "!", "?", "\"", "'s", ";", ":", "(", ")", "--", "'" };
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader in = new BufferedReader(new FileReader("dracula.txt"));
-		StringTokenizer ln = new StringTokenizer(in.readLine());
+		JFrame frame = new JFrame("Input");
+		frame.setAlwaysOnTop(true);
+		BufferedReader in = new BufferedReader(new FileReader("Dracula.txt"));
+		String fileDirectory = System.getProperty("user.dir");
+		File f = new File(fileDirectory + "Words.txt");
+		f.createNewFile();
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("Words.txt")));
 		String str = in.readLine();
 		HashMap<String, Integer> analyze = new HashMap<String, Integer>();
 		TreeSet<Output> outputs = new TreeSet<Output>();
 		while (str != null) {
 			for (int i = 0; i < toRemove.length; i++) {
-				str.replace(toRemove[i], "");
+				str = str.replace(toRemove[i], "");
 			}
+			StringTokenizer ln = new StringTokenizer(str);
 			while (ln.hasMoreTokens()) {
 				String curr = ln.nextToken();
 				if (analyze.containsKey(curr)) {
@@ -40,9 +52,10 @@ public class NovelAnalyzer {
 		}
 		while (!outputs.isEmpty()) {
 			Output o = outputs.pollFirst();
-			System.out.println(o.freq + " " + o.word);
+			out.println(o.freq + " " + o.word);
 		}
 		in.close();
+		out.close();
 	}
 	
 	static class Output implements Comparable<Output> {
@@ -59,7 +72,7 @@ public class NovelAnalyzer {
 			if (this.freq == other.freq) {
 				return this.word.compareTo(other.word);
 			}
-			return Integer.compare(this.freq, other.freq);
+			return Integer.compare(other.freq, this.freq);
 		}
 	}
 }
