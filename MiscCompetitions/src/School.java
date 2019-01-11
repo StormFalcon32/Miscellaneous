@@ -1,24 +1,18 @@
-import java.util.Iterator;
-import java.util.TreeSet;
-
+import java.util.*;
 public class School {
 
 	public static void main(String[] args) {
-		TreeSet<String> set = new TreeSet<String>();
-		set.add("How");
-		set.add("Now");
-		set.add("Brown");
-		set.add("Cow");
+		HashMap<String, String> phonebook = new HashMap<String, String>();
+		phonebook.put("Jack Sparrow",  "555-5555");
+		phonebook.put("Jack",  "555-5555");
+		phonebook.put("Jason",  "555-5555");
+		phonebook.put("Jackson",  "555-5555");
+		phonebook.put("Jack",  "455-5555");
+		Set<String> set = phonebook.keySet();
 		Iterator<String> it = set.iterator();
 		while (it.hasNext()) {
-			if (it.next().length() == 3) {
-				it.remove();
-			}
-		}
-		
-		it = set.iterator();
-		while (it.hasNext()) {
-			System.out.println(it.next());
+			String s = it.next();
+			System.out.println(s + " " + phonebook.get(s));
 		}
 	}
 
