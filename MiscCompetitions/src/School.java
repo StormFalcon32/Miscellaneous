@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class School {
 
@@ -8,6 +9,10 @@ public class School {
 	public static void main(String[] args) {
 		boolean[][] fullMap = new boolean[10][10];
 		int[][] robotMap = new int[10][10];
+		
+		boolean[][] fuelMap = new boolean[10][10];
+		boolean[][] karbMap = new boolean[10][10];
+		fuelMap[9][9] = true;
 
 		fullMap[4][0] = true;
 		fullMap[4][1] = true;
@@ -20,14 +25,15 @@ public class School {
 
 		robotMap[8][7] = 1;
 		robotMap[7][8] = 1;
+		robotMap[8][8] = 1;
 		int steps = 4;
 		int x = 0;
 		int y = 0;
-		while (x != 9 && y != 9) {
-			ArrayList<Integer> path = bfs(new Pos(x, y), new Pos(9, 9), fullMap, robotMap);
+		while (x != 9 || y != 9) {
+			ArrayList<Integer> path = bfs(new Pos(x, y), 0, fullMap, robotMap, fuelMap, karbMap);
 			int changeX = 0;
 			int changeY = 0;
-			for (int i = 0; i < path.size(); i++) {
+			for (int i = path.size() - 1; i >= 0; i--) {
 				changeX += dirX[path.get(i)];
 				changeY += dirY[path.get(i)];
 				if (Math.pow(changeX, 2) + Math.pow(changeY, 2) > steps) {
@@ -36,37 +42,47 @@ public class School {
 					break;
 				}
 			}
-			System.out.println(changeX + " " + changeY);
 			x += changeX;
 			y += changeY;
+			System.out.println(x + " " + y);
 		}
 	}
 
-	static ArrayList<Integer> bfs(Pos loc, Pos dest, boolean[][] fullMap, int[][] robotMap) {
+	static ArrayList<Integer> bfs(Pos loc, int destType, boolean[][] fullMap, int[][] robotMap, boolean[][] fuelMap, boolean[][] karbMap) {
 		int mapLen = fullMap.length;
 		boolean[][] visited = new boolean[mapLen][mapLen];
 		int[][] path = new int[mapLen][mapLen];
-		int[][] dist = new int[mapLen][mapLen];
 
+		Pos dest = null;
 		LinkedList<Pos> q = new LinkedList<Pos>();
 
 		q.push(loc);
 		visited[loc.x][loc.y] = true;
-		dist[loc.x][loc.y] = 0; 
 
 		while (q.size() > 0) {
 			Pos curr = q.poll();
 			visited[curr.x][curr.y] = true;
+			if (destType == 0) {
+				if (fuelMap[curr.x][curr.y]) {
+					dest = new Pos(curr.x, curr.y);
+					break;
+				}
+			}
+			if (destType == 1) {
+				if (karbMap[curr.x][curr.y]) {
+					dest = new Pos(curr.x, curr.y);
+					break;
+				}
+			}
 			for (int i = 0; i < 8; i++) {
 				int newX = dirX[i] + curr.x;
 				int newY = dirY[i] + curr.y;
 				if (isPassable(new Pos(newX, newY), fullMap, robotMap)) {
 					if (!visited[newX][newY]) {
-						dist[newX][newY] = dist[curr.x][curr.y] + 1;
 						path[newX][newY] = (i + 4) % 8;
 						Pos toAdd = new Pos(newX, newY);
 						visited[toAdd.x][toAdd.y] = true;
-						q.push(toAdd);
+						q.add(toAdd);
 					}
 				}
 			}
