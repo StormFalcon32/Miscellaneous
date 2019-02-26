@@ -80,7 +80,9 @@ public class TicTacToe {
 					}
 				}
 			}
-			board[aiBestMove.row][aiBestMove.col] = -1;
+			if (aiBestMove.row != -1 && aiBestMove.col != -1) {
+				board[aiBestMove.row][aiBestMove.col] = -1;
+			}
 		}
 		printBoard(board);
 		System.out.println((isWinner(board) == 1) ? "Player Wins!" : ((isWinner(board) == -1) ? "AI Wins!" : "Tie!"));
@@ -210,8 +212,8 @@ public class TicTacToe {
 	}
 
 	static class Move {
-		int row;
-		int col;
+		int row = -1;
+		int col = -1;
 
 		public Move() {
 
