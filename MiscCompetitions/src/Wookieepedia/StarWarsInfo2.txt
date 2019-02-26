@@ -1,0 +1,90 @@
+NAME:Homeworld:Species:Gender:Position
+Bail Antilles:Alderaan:Human:Male:Senator
+Bail Organa:Alderaan:Human:Male:Senator
+General Carlist Rieekan:Alderaan:Human:Male:Rebel Commander
+Princess Leia Organa:Alderaan:Human:Female:Leader Rebel Alliance
+Firmus Piett:Axxila:Human:Male:Imperial Admiral
+Lobot:Bespin:Human/Cyborg:Male:Cloud City Administrator
+Jek Porkins:Bestine IV:Human:Male:X-Wing Pilot
+Kendal Ozzel:Carida:Human:Male:Imperial Admiral
+Shu Mai:Castell:Gossam:Female:Commerce Guild
+Ki-Adi-Mundi:Cerea:Cerean:Male:Jedi Master
+Sar Labooda:Chalacta:Human:Female:Jedi Knight
+Mas Amedda:Champala:Chagrian:Male:Vice Chair Galactic Senate
+Mon Mothma:Chandrila:Human:Female:Leader Rebel Alliance
+Jango Fett:Concord Dawn:Human:Male:Bounty Hunter
+Crix Madine:Corellia:Human:Male:Rebel General
+Dengar:Corellia:Human:Male:Bounty Hunter
+Han Solo:Corellia:Human:Male:Mercenary
+Wedge Antilles:Corellia:Human:Male:X-Wing Pilot
+Qui-Gon-Jinn:Coruscant:Human:Male:Jedi Master
+Adi Gallia:Coruscant:Human:Female:Jedi Master
+Depa Billaba:Coruscant:Chalactan:Female:Jedi Knight
+Finis Valorum:Coruscant:Human:Male:Supreme Chancellor
+Grizz Frix:Devaron:Human:Male:X-Wing Pilot
+Plo Koon:Dorin:Kel Dor:Male:Jedi Master
+Chief Chirpa:Endor:Ewok:Male:Tribe Chief
+Paploo:Endor:Ewok:Male:Scout
+Logray:Endor:Ewok:Male:Medicine Man
+Wicket Warrick:Endor:Ewok:Male:Cute
+Nippet:Endor:Ewok:Female:Baby
+Wilhuff Tarkin:Eriadu:Human:Male:Death Star Commander
+Zuckuss:Gand:Gand:Male:Bounty Hunter
+Poggle the Lesser:Genosis:Geonosian:Male:Archduke of Genosis
+Mace Windu:Haruun Kal:Korun:Male:Jedi Master
+IG-88:Holowan Laboratories:Droid:Male:Bounty Hunter
+Saesee Tiin:Iktotch:Iktotchi:Male:Jedi Master
+Darth Maul:Iridonia:Iridonian:Male:Sith Lord
+Cal Alder:Kal'Shebbol:Human:Male:Scout
+General Grievous:Kalee:Kaleesh:Male:Commander Droid Army
+Lama Su:Kamino:Kaminoan:Male:Prime Minister Kamino
+Ko Sai:Kamino:Kaminoan:Female:Scientist
+Chewbacca:Kashyyyk:Wookie:Male:Co-Pilot Millennium Falcon
+Ree-Yees:Kinyen:Gran:Male:Criminal
+Droopy McCool:Kirdo III:Kitonak:Male:Horn Player
+Bultar Swan:Kuat:Human:Female:Jedi Knight
+Ask Aak:Malastare:Gran:Male:Senator
+Boba Fett:Mandalore:Human:Male:Bounty Hunter
+Luminara Unduli:Mirial:Mirialan:Female:Jedi Master
+Tessek:Mon Calamari:Quarren:Male:Criminal
+Admiral Ackbar:Mon Calamari:Mon Calamari:Male:Supreme Commander Rebel Fleet
+Captain Panaka:Naboo:Human:Male:Captain Naboo Security Forces
+Jar Jar Binks:Naboo:Gungan:Male:Idiot
+Emperor Palpatine:Naboo:Human:Male:Senator
+Padme Amidala:Naboo:Human:Female:Senator
+R2-D2:Naboo:Droid:Male:Astromech Droid
+Gardulla the Hutt:Nal Hutta:Hutt:Female:Criminal
+Jabba the Hutt:Nal Hutta:Hutt:Male:Crime Lord
+Eeth Koth:Nar Shaddaa:Iridonian Zabrak:Male:Jedi Master
+Nute Gunray:Neimoidia:Neimoidian:Male:Viceroy Trade Federation
+Tey How:Neimoidia:Neimoidian:Female:Communications Officer Trade Federation
+Max Rebo:Orto:Ortolan:Male:Band Leader
+Asajj Ventress:Rattatak:Rattatakian:Female:Dark Jedi
+Greedo:Rodia:Rodian:Male:Bounty Hunter
+Greeata Jendowanian:Rodia:Rodian:Female:Back-up Singer
+Aayla Secura:Ryloth:Twi'lek:Female:Jedi Knight
+Bib Fortuna:Ryloth:Twi'lek:Male:Criminal
+Oola:Ryloth:Twi'lek:Female:Dancer
+Lyn Me:Ryloth:Twi'lek:Female:Dancer
+Coleman Trebor:Sembla:Vurk:Male:Jedi Master
+Count Dooku:Serenno:Human:Male:Sith Lord
+Shaak Ti:Shili:Togruta:Female:Jedi Master
+Ahsoka Tano:Shili:Togruta:Female:Jedi Padawan
+Lando Calrissian:Socorro:Human:Male:Scoundrel
+Ak-rev:Sriluur:Weequay:Male:Drummer
+Aved Luun:Tatooine:Jawa:Female:Shaman
+Luke Skywalker:Tatooine:Human:Male:Jedi Knight
+Biggs Darklighter:Tatooine:Human:Male:X-Wing Pilot
+Watto:Tatooine:Toydarian:Male:Junk Store Owner
+Anakin Skywalker:Tatooine:Human:Male:Jedi Knight
+Shmi Skywalker:Tatooine:Human:Female:Slave
+Darth Vader:Tatooine:Human:Male:Sith Lord
+C-3PO:Tatooine:Droid:Male:Protocol Droid
+Bossk:Trandosha:Trandoshan:Male:Bounty Hunter
+Sly Moore:Umbara:Umbaran:Female:Aide to Chancellor Palpatine
+Moff Jerjerrod:Unknown:Human:Male:Imperial Officer
+Barriss Offee:Unknown:Mirialan:Female:Jedi Knight
+Yoda:Unknown:Unknown:Male:Jedi Master
+Dorovio Bold:Unknown:Human:Female:X-Wing Pilot
+4-LOM:Unknown:Droid:Male:Bounty Hunter
+Obi-Wan Kenobi:Unknown:Human:Male:Jedi Master
