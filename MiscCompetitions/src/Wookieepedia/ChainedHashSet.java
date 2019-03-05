@@ -83,10 +83,7 @@ public class ChainedHashSet<E> implements Set<Person> {
 	@Override
 	public boolean contains(Object o) {
 		int hash = hashFunction(o.hashCode());
-		if (buckets[hash].contains(o)) {
-			return true;
-		}
-		return false;
+		return buckets[hash].contains(o);
 	}
 
 	@Override
