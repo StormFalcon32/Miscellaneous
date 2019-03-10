@@ -2,7 +2,7 @@ package DailyProblem;
 
 public class Prob1 {
 	// All psuedo-code because Java has no pointers
-	// A null object will have an address of 0 so null ^ 5 = 5
+	// A null object will have an address of 0 so null ^ A = A
 	/*
 	public Node first;
 	public Node last;
@@ -14,16 +14,16 @@ public class Prob1 {
 			return;
 		}
 		Node old = last;
-		last = new Node(a, null, old.pointer());
-		old.both ^= last.pointer();
+		last = new Node(a, null, old);
+		old.both ^= last;
 		size++;
 	}
 	
 	public Node remove() {
 		size--;
 		Node old = first;
-		first = getAtPointer(first.both ^ 0);
-		first.both ^= old.pointer();
+		first = first.both ^ null;
+		first.both ^= old;
 		return old;
 	}
 	
@@ -34,12 +34,12 @@ public class Prob1 {
 		if (index == size - 1) {
 			return last;
 		}
-		while ((curr.both ^ prev.pointer()) != null) {
+		while ((curr.both ^ prev) != null) {
 			if (i == index) {
 				return curr;
 			}
 			Node temp = curr;
-			curr = curr.both ^ prev.pointer();
+			curr = curr.both ^ prev;
 			prev = temp;
 		}
 		return null;
@@ -50,17 +50,13 @@ public class Prob1 {
 		last = first;
 	}
 	
-	public Node getAtPointer(int pointer) {
-		return Object @ pointer
-	}
-	
 	static class Node {
 		Object value;
 		Address both;
 		
 		public Node(Object v, Node n, Node p) {
 			value = v;
-			both = n.pointer() ^ p.pointer();
+			both = n ^ p;
 		}
 	}
 	*/
