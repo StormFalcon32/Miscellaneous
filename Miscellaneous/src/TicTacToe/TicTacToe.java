@@ -1,7 +1,9 @@
+package TicTacToe;
+
 import java.util.Scanner;
 
 public class TicTacToe {
-
+	
 	public static void main(String[] args) throws InterruptedException {
 		// 0 is nothing, 1 is X, -1 is O
 		int[][] board = new int[3][3];
@@ -19,10 +21,10 @@ public class TicTacToe {
 		}
 		if (playerOrder == 2) {
 			// Use minMax to calculate best AI move
-
+			
 			int bestScore = Integer.MAX_VALUE;
 			Move aiBestMove = new Move();
-
+			
 			for (int r = 0; r < 3; r++) {
 				for (int c = 0; c < 3; c++) {
 					// If empty cell
@@ -57,12 +59,12 @@ public class TicTacToe {
 			}
 			board[rChoice][cChoice] = 1;
 			System.out.println();
-
+			
 			// Use minMax to calculate best AI move
-
+			
 			int bestScore = Integer.MAX_VALUE;
 			Move aiBestMove = new Move();
-
+			
 			for (int r = 0; r < 3; r++) {
 				for (int c = 0; c < 3; c++) {
 					// If empty cell
@@ -88,7 +90,7 @@ public class TicTacToe {
 		System.out.println((isWinner(board) == 1) ? "Player Wins!" : ((isWinner(board) == -1) ? "AI Wins!" : "Tie!"));
 		in.close();
 	}
-
+	
 	static int minMax(int[][] grid, int depth, boolean maximizer, Move root) {
 		int result = isWinner(grid);
 		if (result == 1) {
@@ -128,7 +130,7 @@ public class TicTacToe {
 			return min;
 		}
 	}
-
+	
 	static int isWinner(int[][] grid) {
 		int count = 0;
 		int val = 0;
@@ -193,7 +195,7 @@ public class TicTacToe {
 		}
 		return -100;
 	}
-
+	
 	static void printBoard(int[][] grid) {
 		for (int r = 0; r < 3; r++) {
 			for (int c = 0; c < 3; c++) {
@@ -210,15 +212,15 @@ public class TicTacToe {
 		}
 		System.out.println();
 	}
-
+	
 	static class Move {
 		int row = -1;
 		int col = -1;
-
+		
 		public Move() {
-
+			
 		}
-
+		
 		public Move(int a, int b) {
 			row = a;
 			col = b;
